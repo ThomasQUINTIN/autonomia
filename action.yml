@@ -1,0 +1,15 @@
+name: Generate Job Summary
+description: Generates a summary of test results, including a table and link to staging deployment.
+
+branding: 
+  icon: 'book-open'
+  color: 'green'
+
+inputs:
+  test-results:
+    description: 'JSON-formatted test results'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'generate-summary.js'
