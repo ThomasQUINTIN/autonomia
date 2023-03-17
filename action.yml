@@ -13,3 +13,5 @@ inputs:
 runs:
   using: 'node12'
   main: 'generate-summary.js'
+  pre:
+    "npm install node-fetch"
