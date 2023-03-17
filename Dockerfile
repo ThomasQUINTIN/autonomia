@@ -1,9 +1,13 @@
-FROM node:12
+FROM debian:buster-slim
 
-WORKDIR /app
+RUN apt-get update && \
+    apt-get install -y nodejs npm
 
 COPY . /app
 
-RUN npm install node-fetch
+WORKDIR /app
+
+RUN npm install && \
+    npm install node-fetch
 
 CMD ["node", "generate-summary.js"]
