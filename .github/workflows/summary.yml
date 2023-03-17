@@ -1,0 +1,23 @@
+name: paint-core
+
+on:
+  workflow_call:
+  push:
+    branches: [ '*' ]
+  pull_request:
+    branches: [ '*' ]
+
+jobs:
+  notif:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Title SUMMARY
+        run: |
+          echo "### $GITHUB_ACTOR ${{ github.event.action }} $GITHUB_EVENT_NAME:" >> $GITHUB_STEP_SUMMARY
+
+      - name: Set table SUMMARY
+        run: |
+          echo "<table>" >> $GITHUB_STEP_SUMMARY
+          echo "<tr><td>NULL</td><td>NULL</td></tr>" >> $GITHUB_STEP_SUMMARY
+          echo "<tr><td>NULL</td><td>NULL</td></tr>" >> $GITHUB_STEP_SUMMARY
+          echo "</table>" >> $GITHUB_STEP_SUMMARY
