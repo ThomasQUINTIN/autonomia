@@ -8,7 +8,7 @@ branding:
 inputs:
   test-results:
     description: 'JSON-formatted test results'
-    required: true
+    required: false
 
 runs:
   using: 'node12'
