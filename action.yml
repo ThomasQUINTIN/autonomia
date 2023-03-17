@@ -11,6 +11,5 @@ inputs:
     required: false
 
 runs:
-  using: 'node12'
-  main: 'generate-summary.js'
-  pre: 'npm install node-fetch'
+  using: 'docker'
+  image: 'Dockerfile'
