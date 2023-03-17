@@ -2,7 +2,7 @@ FROM node:12
 
 WORKDIR /app
 
-COPY . .
+COPY . /app
 
 RUN npm install node-fetch
 
