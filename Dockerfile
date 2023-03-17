@@ -8,6 +8,6 @@ COPY . /app
 WORKDIR /app
 
 RUN npm install && \
-    npm install node-fetch
+    npm install node-fetch@2
 
 CMD ["node", "generate-summary.js"]
