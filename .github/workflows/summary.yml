@@ -1,4 +1,4 @@
-name: paint-core
+name: summary-core
 
 on:
   workflow_call:
