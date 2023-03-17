@@ -1,13 +1,10 @@
-FROM debian:buster-slim
-
-RUN apt-get update && \
-    apt-get install -y nodejs npm
-
-COPY . /app
+FROM python:3.9
 
 WORKDIR /app
 
-RUN npm install && \
-    npm install node-fetch@2
+COPY requirements.txt /app/
+RUN pip install -r requirements.txt
 
-CMD ["node", "generate-summary.js"]
+COPY . /app
+
+CMD ["python", "script.py"]
